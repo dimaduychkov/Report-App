@@ -12,7 +12,7 @@ namespace ReportApp.Data
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer(
-                    "Server=dima;Database=ReportDb;Trusted_Connection=True;TrustServerCertificate=True;");
+                    "Server=localhost;Database=ReportDb;Trusted_Connection=True;TrustServerCertificate=True;");
             }
         }
 
