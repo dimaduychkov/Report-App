@@ -128,6 +128,12 @@ namespace ReportApp
                 return;
             }
 
+            if (!item.IsAssembly)
+            {
+                Console.WriteLine("Нельзя сделать разузловку для не ДСЕ.");
+                return;
+            }
+
             var reportRows = reportService.BuildReport(item.Batch);
 
             if (reportRows.Count == 0)
@@ -166,6 +172,12 @@ namespace ReportApp
             if (item == null)
             {
                 Console.WriteLine("Элемент с таким Id не найден.");
+                return;
+            }
+
+            if (!item.IsAssembly)
+            {
+                Console.WriteLine("Нельзя сделать разузловку для не ДСЕ.");
                 return;
             }
 
